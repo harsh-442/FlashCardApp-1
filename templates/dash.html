@@ -1,0 +1,42 @@
+{%extends "base.html"%}
+{%block title%}Dashboard{%endblock title%}
+{%block content%}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+      
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#" return false>Dashboard</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/adddecks">Add Decks<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Manage Decks<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Show all decks<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <a href="/login" class="btn btn-success">Logout</a>
+    </div>
+  </nav>
+  {%if deck_num == 0%}
+      <div>
+          No Decks Found. Please Add Decks.
+      </div>
+  {% else %}
+    {% for deck in range(3) %}
+        <div class="btn-group" style = "padding-left: 100px; padding-top: 250px">
+        <button type="button" class="btn" style = "height:200px; width: 200px; background-color: #ababab; color: white">
+            <h1 class="display-6">
+                Deck
+            </h1>
+        </button>
+        </div>
+    {% endfor %}
+  {% endif %}
+{% endblock content%}
