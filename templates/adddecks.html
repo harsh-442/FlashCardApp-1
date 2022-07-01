@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title%}Add Deck{% endblock %}
+
+{%block content%}
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color:#D7EBFF">
+      
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/" return false>Dashboard</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Add Decks<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Manage Decks<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Show all decks<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <a href="/login" class="btn btn-primary">Logout</a>
+    </div>
+  </nav>
+<div class="container" style = "padding-top: 4em">
+    <div class="container">
+        <h1 class="display-3" style="font-size:2rem;text-decoration:underline;text-decoration-thickness:5%">Add Deck Details</h1></br>
+    </div>
+    <form action="/add" method = "POST">
+    <div class="container">
+        <label for="DeckName" class="form-label">Name</label>
+        <input type="text" maxlength="25" id="DeckName" name = "name" class="form-control">
+        <div class="mb-3">
+            <br>
+            <label for="Description" class="form-label">Description</label>
+            <textarea class="form-control" maxlength="200" id="Description" name = "description" rows="2" placeholder="A brief description of the deck"></textarea>
+        </div>
+    </div>
+    <div class = "container" style = "padding-top: 1em">
+        <button type="submit" class="btn btn-outline-primary">Add Deck</button>
+    </div>
+    </form>
+</div>
+
+{% endblock %}

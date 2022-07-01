@@ -1,7 +1,7 @@
 {%extends "base.html"%}
-{%block title%}Dashboard{%endblock title%}
+{%block title%}Dashboard{%endblock%}
 {%block content%}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color:#D7EBFF">
       
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
@@ -21,22 +21,23 @@
           <a class="nav-link" href="#">Show all decks<span class="sr-only">(current)</span></a>
         </li>
       </ul>
-      <a href="/login" class="btn btn-success">Logout</a>
+      <a href="/login" class="btn btn-primary">Logout</a>
     </div>
   </nav>
-  {%if deck_num == 0%}
+  {%if deckno == 0%}
       <div>
           No Decks Found. Please Add Decks.
       </div>
   {% else %}
     {% for deck in range(3) %}
         <div class="btn-group" style = "padding-left: 100px; padding-top: 250px">
-        <button type="button" class="btn" style = "height:200px; width: 200px; background-color: #ababab; color: white">
+        <button type="button" class="btn" style = "height:200px; width: 200px; background-color: #cdcdcd; color: white">
             <h1 class="display-6">
-                Deck
+                Deck {{deck+1}}
             </h1>
         </button>
         </div>
     {% endfor %}
   {% endif %}
-{% endblock content%}
+{% endblock%}
+

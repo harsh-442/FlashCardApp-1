@@ -1,21 +1,21 @@
 {%extends "base.html"%}
-{%block title%}Login{%endblock title%}
+{%block title%}Login{%endblock%}
 {%block content%}
 <form action="action_page.php" method="post">
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #878787;">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#D7EBFF;">
         <a class="navbar-brand" href="#" style="font-size:2.5rem">FlashCard App</a>
         
     </nav>
         <div class="container" >
             </br></br>
-            <h2 align="center">User Login</h2>
+            <h1 class="display-3" style="font-size:2.3rem;" align="center">User Login</h1>
         </div>
         <div class="container-fluid"  style="width:400px; padding-bottom: 200px">
             <form action="/" method="POST">
             </br>
                 <div class="mb-4">
                     <label for="username" class="form-label">Username</label>
-                    <input type="text" class="form-control" name = "username" id="username" required>
+                    <input type="text" input-border-color:"green" class="form-control" name = "username" id="username" required>
                 </div>
                 <div class="mb-3">
                     <label for="inputPassword" class="form-label">Password</label>
@@ -26,9 +26,9 @@
                 </div>
                 <div id="create-account-wrap">
                 </br>
-                    <p>Not a member? <a href="#">Create Account</a><p>
+                    <p>Not a member? <a href="/signup">Create Account</a><p>
                 </div>
             </form>
         </div1>
   </form>
-{%endblock content%}
+{%endblock%}

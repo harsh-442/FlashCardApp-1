@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Sign Up
+{% endblock %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#D7EBFF;">
+    <a class="navbar-brand" href="#" style="font-size:2.5rem">FlashCard App</a>
+    
+</nav>
+    <div class="container" >
+        </br></br>
+        <h1 class="display-3" style="font-size:2.3rem;" align="center">Sign Up</h1>
+    </div>
+<div class="container" style="width:400px; padding-bottom: 200px">
+	<form action = "/signup" method = "POST">
+		<div class="mb-3">
+			<label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" name = "username" id="username" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" name = "password1" id="exampleInputPassword1" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" name = "password2" id="exampleInputPassword2" required>
+        </div>
+        <div >
+            <button type="submit" class="btn btn-primary">Sign Up to FlashCardApp</button>
+        </div>
+        <div id="create-account-wrap">
+        </br>
+            <p>Not interested? <a href="/login">Return to login page</a><p>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
